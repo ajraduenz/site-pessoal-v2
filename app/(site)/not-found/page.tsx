@@ -15,7 +15,6 @@ const NotFound = () => {
           }
           alt="Flores amarelas"
           rel="preload"
-          as="image"
         ></img>
         <h1>Erro 404</h1>
         <p>Página não encontrada</p>

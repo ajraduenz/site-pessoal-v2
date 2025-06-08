@@ -8,8 +8,9 @@ type ModalEnvioProps = {
     email: string;
     telefone: string;
     interesse: string;
-    mensagem: string;
-    pagina: string;
+    mensagem?: string;
+    pagina?: string;
+    projeto?: string;
   };
   setModalEnvio: React.Dispatch<React.SetStateAction<boolean>>;
 };
@@ -18,13 +19,13 @@ const ModalEnvio: React.FC<ModalEnvioProps> = ({ values, setModalEnvio }) => {
   const [statusEnvio, setStatusEnvio] = React.useState("enviando");
 
   React.useEffect(() => {
-    var formData = new FormData();
+    const formData = new FormData();
     formData.append("nome", values.nome);
     formData.append("email", values.email);
     formData.append("telefone", values.telefone);
     formData.append("interesse", values.interesse);
-    formData.append("mensagem", values.mensagem);
-    formData.append("pagina", values.pagina);
+    formData.append("mensagem", values?.mensagem || "");
+    formData.append("pagina", values?.pagina || "");
     async function enviar() {
       try {
         const response = await fetch("./enviar.php", {
