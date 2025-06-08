@@ -1,0 +1,109 @@
+
+/* orçamentos */
+.secao-orcamentos{
+  display: flex;
+margin:0 auto;
+    width: 100%;
+    justify-content: center;
+
+}
+.orcamento.opcao-2{
+  box-shadow: inset cadetblue 0 0px 0px 4px;
+  border-radius:0 0 20px 20px;
+}
+
+
+.orcamento{
+  position: relative;
+  margin: -5vw 3% 0 3%;
+  padding: 1rem;
+  background-color: #4c4c4c;
+  min-width: 30%;
+  border-radius: 20px;
+  display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+  
+}
+.orcamento p{
+  padding:0.1rem 0.5rem;
+}
+.orcamento h2{
+
+  font-size: 1.7em;
+  text-align: center;
+  border-bottom: 2px solid #fff;
+  margin-bottom: 10px;
+  padding-bottom: 10px;
+}
+
+
+
+
+
+.destaque{
+  background: cadetblue;
+  position: absolute;
+  top: -1.8rem;
+  left: 0;
+  width: 100%;
+  text-align: center;
+  font-size: 1.5rem;
+  padding: 5px;
+  border-radius: 20px 20px 0 0;
+
+
+}
+@media (max-width:1000px){
+  .secao-orcamentos{
+    flex-direction: column;
+  }
+  .secao-orcamentos .orcamento{
+    margin:  -5vw auto 15vw auto;   
+ 
+  }
+
+  .introducao h1{   
+    top: 40%;
+}
+.content-destaque{
+  padding-top:1rem
+}
+.informacoes{
+  width: 98%;
+}
+.secao-orcamentos .orcamento:nth-last-child(1){
+  margin: -10vw auto 0 auto;  
+  width: 100%;   
+}   
+
+}
+
+@media (max-width:600px){
+  .introducao h1{
+
+    font-size: 2.5em;
+   
+}
+.orcamento p {
+    line-height: 1.4;
+    font-size: 0.9em;
+    margin-bottom: 0.3em;
+}
+
+.separator{
+  margin: 40px auto;
+}
+
+}
+
+@media (max-width:520px){
+  .destaque {
+    top: -1.5rem;  
+text-align: center;
+font-size: 1.5rem;
+padding: 0px;
+
+}
+  
+}

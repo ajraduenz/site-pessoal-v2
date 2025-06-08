@@ -1,0 +1,113 @@
+/* orçamentos */
+
+.siteBasico.secao-orcamentos {
+  display: flex;
+  margin: 0 auto;
+  width: 100%;
+  justify-content: center;
+}
+
+.siteBasico.orcamento {
+  position: relative;
+  margin: -5vw 3% 0 3%;
+  padding: 1rem 2rem;
+  background-color: #4c4c4c;
+  min-width: 30%;
+  max-width: 1000px;
+  border-radius: 20px;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+.siteBasico.orcamento p {
+  padding: 0.1rem 0.5rem;
+}
+.siteBasico.orcamento h2 {
+  font-size: 1.7em;
+  text-align: center;
+  border-bottom: 2px solid #fff;
+  margin-bottom: 10px;
+  padding-bottom: 10px;
+}
+.siteBasico.informacoes p,
+.siteBasico.informacoes li {
+  line-height: 1.5;
+  text-indent: 2em;
+  margin-bottom: 0.5em;
+}
+
+.siteBasico.informacoes h2 {
+  font-size: 2em;
+  padding: 0px 0px 0px 10px;
+  margin: 0 auto 15px;
+  text-align: center;
+  padding: 5px;
+  white-space: nowrap;
+}
+.siteBasico.informacoes {
+  width: 70%;
+  margin: 40px auto;
+  background-image: url(../../../src/img/green-vintage-flowers-dinner-menu.png);
+  background-size: 100%;
+  background-repeat: no-repeat;
+  background-color: cadetblue;
+  border-radius: 20px;
+  padding: 20px;
+  background-position: bottom;
+}
+
+.siteBasico.beneficios h3 {
+  font-size: 1.5em;
+}
+.siteBasico.beneficios a,
+.siteBasico.informacoes a {
+  color: #fff;
+  text-decoration: underline;
+}
+
+@media (max-width: 1000px) {
+  .secao-orcamentos {
+    flex-direction: column;
+  }
+  .secao-orcamentos .orcamento {
+    margin: -5vw auto 0 auto;
+    padding: 1rem 0.5em;
+  }
+
+  .introducao h1 {
+    top: 40%;
+  }
+  .siteBasico.content-destaque {
+    padding-top: 1rem;
+  }
+  .siteBasico.informacoes {
+    width: 98%;
+  }
+}
+@media (max-width: 700px) {
+  .informacoes {
+    padding: 7px;
+  }
+}
+@media (max-width: 600px) {
+  .introducao h1 {
+    font-size: 2.5em;
+  }
+  .siteBasico.orcamento h2 {
+    font-size: 1.6rem;
+  }
+  .siteBasico.orcamento p,
+  .siteBasico.informacoes p,
+  .siteBasico.informacoes li {
+    line-height: 1.4;
+    font-size: 0.9em;
+    margin-bottom: 0.3em;
+  }
+  .siteBasico.informacoes p,
+  .siteBasico.informacoes li {
+    text-indent: 1em;
+  }
+  .siteBasico.separator {
+    margin: 40px auto;
+  }
+}

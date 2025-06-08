@@ -1,0 +1,42 @@
+.modalidade {
+  margin: -5vw auto 0 auto;
+
+  padding: 1.5% 3%;
+  background-color: #4c4c4c;
+  max-width: 1280px;
+  border-radius: 20px;
+  position: relative;
+}
+
+.modalidade h2 {
+  margin: 0 auto;
+  font-size: 1.7em;
+  text-align: center;
+  border-bottom: 2px solid #fff;
+  margin-bottom: 10px;
+  padding-bottom: 10px;
+  width: fit-content;
+}
+
+.modalidade p {
+  line-height: 1.5;
+  text-indent: 2em;
+  margin-bottom: 0.5em;
+}
+.campo + .campo {
+  padding: 50px 0;
+  margin: 50px 0;
+}
+
+.campo-imagem {
+  width: 100%;
+  margin: 0 auto;
+}
+.campo-imagem img {
+  display: block;
+  margin: 30px auto;
+  border-radius: 20px;
+  aspect-ratio: 140/57;
+  width: 100%;
+  max-width: 560px;
+}

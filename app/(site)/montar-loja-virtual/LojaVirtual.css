@@ -1,0 +1,120 @@
+/* orçamentos */
+
+.lojaVirtual.secao-orcamentos {
+  display: flex;
+  margin: 0 auto;
+  width: 100%;
+  justify-content: center;
+}
+
+.lojaVirtual.orcamento {
+  position: relative;
+  margin: -5vw 3% 0 3%;
+  padding: 1rem 2rem;
+  background-color: #4c4c4c;
+  min-width: 30%;
+  max-width: 1000px;
+  border-radius: 20px;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+.lojaVirtual.orcamento p {
+  padding: 0.1rem 0.5rem;
+}
+.lojaVirtual.orcamento h2 {
+  font-size: 1.7em;
+  text-align: center;
+  border-bottom: 2px solid #fff;
+  margin-bottom: 10px;
+  padding-bottom: 10px;
+}
+.lojaVirtual.informacoes p,
+.lojaVirtual.informacoes li {
+  line-height: 1.5;
+  text-indent: 2em;
+  margin-bottom: 0.5em;
+}
+
+.lojaVirtual.informacoes h2 {
+  font-size: 2em;
+  padding: 0px 0px 0px 10px;
+  margin: 0 auto 15px;
+  text-align: center;
+  padding: 5px;
+  white-space: nowrap;
+}
+.lojaVirtual.informacoes {
+  width: 70%;
+  margin: 40px auto;
+  background-image: url(../../../src/img/green-vintage-flowers-dinner-menu.png);
+  background-size: 100%;
+  background-repeat: no-repeat;
+  background-color: cadetblue;
+  border-radius: 20px;
+  padding: 20px;
+  background-position: bottom;
+}
+
+.lojaVirtual.beneficios h3 {
+  font-size: 1.5em;
+}
+.lojaVirtual.beneficios a,
+.informacoes a {
+  color: #fff;
+  text-decoration: underline;
+}
+
+@media (max-width: 1000px) {
+  .lojaVirtual.secao-orcamentos {
+    flex-direction: column;
+  }
+  .lojaVirtual.secao-orcamentos .lojaVirtual.orcamento {
+    margin: -5vw auto 0 auto;
+    padding: 1rem 0.5em;
+  }
+
+  .lojaVirtual.introducao h1 {
+    top: 40%;
+  }
+  .lojaVirtual.content-destaque {
+    padding-top: 1rem;
+  }
+  .lojaVirtual.informacoes {
+    width: 98%;
+  }
+}
+@media (max-width: 700px) {
+  .lojaVirtual.informacoes {
+    padding: 7px;
+  }
+}
+@media (max-width: 600px) {
+  .lojaVirtual.introducao h1 {
+    font-size: 2em;
+  }
+  .lojaVirtual.orcamento h2 {
+    font-size: 1.6rem;
+  }
+  .lojaVirtual.orcamento p,
+  .lojaVirtual.informacoes p,
+  .lojaVirtual.informacoes li {
+    line-height: 1.4;
+    font-size: 0.9em;
+    margin-bottom: 0.3em;
+  }
+  .lojaVirtual.informacoes p,
+  .lojaVirtual.informacoes li {
+    text-indent: 1em;
+  }
+  .lojaVirtual.separator {
+    margin: 40px auto;
+  }
+}
+.lojaVirtual.condicao-pgto {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-size: 1.8rem;
+  margin: 40px auto;
+}
