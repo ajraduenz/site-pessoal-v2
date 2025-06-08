@@ -15,9 +15,9 @@ const Header: React.FC = () => {
       setMobileMenu(false);
     } else {
       if (document?.querySelector(".filha.active")) {
-        document?.querySelector(".categoria-pai").classList.add("active");
+        document?.querySelector(".categoria-pai")?.classList.add("active");
       } else {
-        document?.querySelector(".categoria-pai").classList.remove("active");
+        document?.querySelector(".categoria-pai")?.classList.remove("active");
       }
     }
   }, [mobile, pathname]);
@@ -55,7 +55,7 @@ const Header: React.FC = () => {
       <div className="background-header"></div>
 
       <header>
-        <NavLink to="/" className="logo" end>
+        <NavLink to="/" className="logo">
           Aj Raduenz
         </NavLink>
 
@@ -69,9 +69,7 @@ const Header: React.FC = () => {
               <div className="mobile-links">
                 <ul>
                   <li>
-                    <NavLink to="/" end>
-                      Criação de Sites
-                    </NavLink>
+                    <NavLink to="/">Criação de Sites</NavLink>
                   </li>
                   <li>
                     <NavLink to="/ferramentas">Ferramentas</NavLink>
@@ -93,9 +91,7 @@ const Header: React.FC = () => {
           <nav>
             <ul className="menu-topo">
               <li>
-                <NavLink to="/" end>
-                  Criação de Sites
-                </NavLink>
+                <NavLink to="/">Criação de Sites</NavLink>
               </li>
               <li>
                 <NavLink to="/ferramentas">Ferramentas</NavLink>

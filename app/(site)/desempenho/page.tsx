@@ -27,7 +27,6 @@ const Desempenho = () => {
           }
           alt="Cronômetro"
           rel="preload"
-          as="image"
         ></img>
         <div className="separator"></div>
       </section>

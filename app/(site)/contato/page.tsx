@@ -15,16 +15,15 @@ const Contato = () => {
     telefone: "",
     mensagem: "",
     interesse: "",
-    pagima: "Contato no site",
+    pagina: "Contato no site",
   });
-  function onChange({ target }) {
+  function onChange({
+    target,
+  }: {
+    target: EventTarget & (HTMLInputElement | HTMLTextAreaElement);
+  }) {
     const { id, value } = target;
     setValues({ ...values, [id]: value });
-  }
-
-  function handleSubmit(event) {
-    event.preventDefault();
-    setModalEnvio(!modalEnvio);
   }
 
   const [imgSrc, setImgSrc] = React.useState(contato.src);
@@ -44,13 +43,19 @@ const Contato = () => {
         descricao="Desenvolvimento Web e Criação de Sites em Pomerode e região do vale do Itajaí. Entre em contato. Pagamento em até 12x Sem Juros. Clique e confira!"
       />
       <section className="introducao">
-        <img src={imgSrc} alt="Cartas de contato" rel="preload" as="image" />
+        <img src={imgSrc} alt="Cartas de contato" rel="preload" />
         <h1>CONTATO</h1>
         <div className="separator"></div>
       </section>
       <section className="introducao">
         <div className="container">
-          <form onSubmit={handleSubmit} className="contato">
+          <form
+            onSubmit={(event) => {
+              event.preventDefault();
+              setModalEnvio(!modalEnvio);
+            }}
+            className="contato"
+          >
             <div className="info-contato">
               Preencha o formulário abaixo e assim que possível entrarei em
               contato:
@@ -102,15 +107,14 @@ const Contato = () => {
             </div>
             <div className="campo-input container-mensagem">
               <textarea
-                type="text"
                 id="mensagem"
                 value={values.mensagem}
                 placeholder="Mensagem"
                 required
-                onChange={onChange}
-                cols="25"
+                onChange={(e) => onChange(e)}
+                cols={25}
                 name="mensagem"
-                rows="6"
+                rows={6}
               />
             </div>
             <Button referencia="botao-contato" content="Enviar" />
