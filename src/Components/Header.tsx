@@ -5,7 +5,7 @@ import "./Header.css";
 import getScrollPosition from "./Functions/getScrollPosition";
 import { usePathname } from "next/navigation";
 
-const Header = () => {
+const Header: React.FC = () => {
   const [mobileMenu, setMobileMenu] = React.useState(false);
   const [mobile, setMobile] = React.useState(false);
 

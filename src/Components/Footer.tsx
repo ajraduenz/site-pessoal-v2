@@ -2,7 +2,7 @@ import React from "react";
 import "./Footer.css";
 import reactLogo from "../img/react-logo.png";
 import Image from "next/image";
-const Footer = () => {
+const Footer: React.FC = () => {
   const ano = new Date().getFullYear();
   return (
     <footer>

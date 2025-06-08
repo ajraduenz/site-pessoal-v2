@@ -1,7 +1,7 @@
 "use client";
 import Footer from "../../src/Components/Footer";
 import Header from "../../src/Components/Header";
-import useWindowDimensions from "../../src/Components/Functions/useWindowDimensions.js";
+import useWindowDimensions from "../../src/Components/Functions/useWindowDimensions";
 
 export default function RootLayout({
   children,

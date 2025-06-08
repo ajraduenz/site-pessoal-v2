@@ -1,7 +1,12 @@
 import React from "react";
 import NextHead from "next/head";
 
-const Head = (props) => {
+type HeadProps = {
+  titulo?: string;
+  descricao?: string;
+};
+
+const Head: React.FC<HeadProps> = (props) => {
   return (
     <NextHead>
       <title>

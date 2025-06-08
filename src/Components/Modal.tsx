@@ -2,9 +2,25 @@ import React from 'react'
 import './Modal.css'
 import Button from './Button';
 import ModalEnvio from './ModalEnvio';
-const Modal = ({ setModal, projeto }) => {
+
+type ModalProps = {
+  setModal: React.Dispatch<React.SetStateAction<boolean>>;
+  projeto: string;
+};
+
+const Modal: React.FC<ModalProps> = ({ setModal, projeto }) => {
   const [modalEnvio, setModalEnvio] = React.useState(false)
-  const [values, setValues] = React.useState({
+
+  type FormValues = {
+    nome: string;
+    email: string;
+    telefone: string;
+    mensagem: string;
+    interesse: string;
+    pagina: string;
+  };
+
+  const [values, setValues] = React.useState<FormValues>({
     nome: '',
     email: '',
     telefone: '',
@@ -12,15 +28,15 @@ const Modal = ({ setModal, projeto }) => {
     interesse: '',
     pagina: projeto,
   });
-  function onChange({ target }) {
+  function onChange({ target }: React.ChangeEvent<HTMLInputElement | HTMLTextAreaElement>) {
     const { id, value } = target;
     setValues({ ...values, [id]: value })
   }
  
-  function handleSubmit(event) {
+  function handleSubmit(event: React.FormEvent) {
     event.preventDefault();
     setModalEnvio(!modalEnvio)
-  } 
+  }
   return (
     <div className="modal-outer" onClick={(event) => { if (event.target === event.currentTarget) { setModal(false) } }}>
 
