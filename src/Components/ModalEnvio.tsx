@@ -2,7 +2,19 @@
 import React from "react";
 import "./ModalEnvio.css";
 
-const ModalEnvio = ({ values, setModalEnvio }) => {
+type ModalEnvioProps = {
+  values: {
+    nome: string;
+    email: string;
+    telefone: string;
+    interesse: string;
+    mensagem: string;
+    pagina: string;
+  };
+  setModalEnvio: React.Dispatch<React.SetStateAction<boolean>>;
+};
+
+const ModalEnvio: React.FC<ModalEnvioProps> = ({ values, setModalEnvio }) => {
   const [statusEnvio, setStatusEnvio] = React.useState("enviando");
 
   React.useEffect(() => {

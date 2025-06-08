@@ -2,7 +2,11 @@ import React, { Suspense } from "react";
 import "./Href.css";
 import Link from "next/link";
 
-const Href = (props) => {
+type HrefProps = {
+  para?: string;
+};
+
+const Href: React.FC<HrefProps> = ({ para }) => {
   return (
     <div>
       <Suspense
@@ -23,7 +27,7 @@ const Href = (props) => {
       >
         <Link
           className="go-to-service"
-          href={props?.para || "/"}
+          href={para || "/"}
           title="Saiba Mais"
         >
           Saiba Mais

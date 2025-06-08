@@ -1,8 +1,15 @@
 import React from 'react'
 import './Preco.css'
 
+type PrecoProps = {
+  preco?: string;
+  precoAntigo?: string;
+  condicoesParcela?: string;
+  valorParcela?: string;
+  semPreco?: boolean;
+};
 
-export default function Preco(props) {
+export default function Preco(props: PrecoProps) {
   return (
     <div className="preco">
       {props.semPreco
